@@ -46,6 +46,11 @@ class ConfigManager {
     const s = this.config.output ?? path.join(__dirname, APP_DOWNLOAD_DIR)
     return s
   }
+
+  public getExtension(): string {
+    const extension = this.config.extension || '.ts'
+    return extension
+  }
 }
 
 export const configManager = new ConfigManager()

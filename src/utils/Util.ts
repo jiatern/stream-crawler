@@ -11,7 +11,7 @@ export class Util {
       : new Date()
     const s = date.toISOString()
       .replace(/[^\d]/g, '')
-      .substring(2, 12)
+      .substring(2, 8)
     return s
   }
 }

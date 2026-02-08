@@ -79,17 +79,17 @@ export class TwitCastingCrawler extends EventEmitter {
 
         const fileName = process.env.TWITCASTING_DOWNLOADER === 'streamlink'
           ? [
-            `[${user.id.replace(/[:]/g, '_')}]`,
-            `[${Util.getTimeString()}]`,
+            `${Util.getTimeString()}`,
+            ' ',
+            `${user.id.replace(/[:]/g, '_')}`,
             ' ',
             `(${movie.id})`,
-            '.mp4',
+            `${configManager.getExtension()}`,
           ].join('')
           : `[%(uploader_id)s][${Util.getTimeString()}] %(title)s (%(id)s).%(ext)s`
 
         const output = path.join(
           configManager.getOutDir(),
-          'twitcasting',
           fileName,
         )
 
