@@ -2,6 +2,9 @@
 # Output directory (default to current working folder)
 # output: d:/downloads
 
+# Output file extension (used for streamlink only). Default = .ts
+extension: .ts
+
 # Additional yt-dlp options
 ytdlOptions:
 #  - -f
